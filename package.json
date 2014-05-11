@@ -1,0 +1,26 @@
+{
+  "name": "ace2cm",
+  "version": "0.0.1",
+  "description": "Convert Ace syntax highlighters to CodeMirror.",
+  "keywords": ["CodeMirror", "Ace", "syntax", "highlighting"],
+  "bugs": {
+    "url": "https://github.com/espadrine/ace2cm/issues",
+    "email": "thaddee.tyl@gmail.com"
+  },
+  "license": "MIT",
+  "author": "Thaddée Tyl <thaddee.tyl@gmail.com>",
+  "main": "convert.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/espadrine/ace2cm"
+  },
+  "dependencies": {
+    "dot": "~1.0.2"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  },
+  "bin": { "ace2cm": "./gh-badge.js" },
+  "engines": { "node": "0.10.x" }
+}
