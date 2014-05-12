@@ -8,6 +8,14 @@ CodeMirror does not (and inversely).
 
 This software translates Ace syntax sheets to CodeMirror's format.
 
+## Use
+
+Either run `make`, or something like this:
+
+    node convert.js mode-name /path/to/mode_highlight_rules.js > generated-mode-file.js
+
+## Related information
+
 Under MIT license.
 
 Portions of this project are covered by the BSD license of the Ace project.
