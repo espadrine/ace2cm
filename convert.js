@@ -45,7 +45,7 @@ function addOtherConf(modeConf, otherConf) {
     modeConf[key] = otherConf[key];
   }
 }
-addOtherConf(modeConf, JSON.parse(process.argv[4]));
+addOtherConf(modeConf, JSON.parse(process.argv[4] || '{}'));
 
 // Fetch the template.
 var template = ''+fs.readFileSync('mode-template.js');
