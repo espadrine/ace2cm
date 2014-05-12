@@ -5,11 +5,13 @@ function fetchHighlightRules(aceSheet) {
   var lines = (''+aceSheet).split('\n');
   var beforeStart = true;  // Before the start of the function we fetch.
   var beforeEnd = true;
+  var functionName = '';  // Name of the real *HighlightRules function.
   var result = 'function() {\n';
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i];
     if (beforeStart) {
       if (line.match(/HighlightRules = function/)) {
+        functionName = line.match(/ ([a-zA-Z\$_]+HighlightRules) =/)[1];
         beforeStart = false;
       }
     } else if (beforeEnd) {
@@ -17,7 +19,7 @@ function fetchHighlightRules(aceSheet) {
         beforeEnd = false;
       } else {
         // Indent it properly.
-        result += '  ' + line + '\n';
+        result += '  ' + line.replace(functionName, 'HighlightRules') + '\n';
       }
     } else { break; }
   }
