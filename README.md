@@ -8,6 +8,12 @@ CodeMirror does not (and inversely).
 
 This software translates Ace syntax sheets to CodeMirror's format.
 
+## Install
+
+* [Download](https://github.com/espadrine/ace2cm/archive/master.zip) and extract
+* Navigate to folder `cd ace2cm`
+* Run `npm install` command to install required dependencies
+
 ## Use
 
 Either run `make`, or something like this:
