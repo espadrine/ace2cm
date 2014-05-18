@@ -93,8 +93,6 @@ function fetchModule(modulePath, text, modules, hasModules) {
 var modeConf = {};
 
 // Read all arguments.
-// TODO: remove the line below.
-// eg, ./ace2cm asciidoc ./asciidoc_highlight_rules.js '{"textRules":false}'
 // eg, ./ace2cm asciidoc /path/to/ace/ '{"modeName":"asciidoc"}'
 
 // The mode name is first.

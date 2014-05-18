@@ -18,7 +18,12 @@ This software translates Ace syntax sheets to CodeMirror's format.
 
 Either run `make`, or something like this:
 
-    node convert.js mode-name /path/to/mode_highlight_rules.js > generated-mode-file.js
+    node convert.js mode-name /path/to/ace-dir/ > generated-mode-file.js
+
+The mode name is that of the Ace mode. If you want a different name for the
+CodeMirror mode name, you can specify it in another parameter:
+
+    node convert.js mode-name /path/to/ace-dir/ '{"modeName":"my-mode"}' > generated-mode-file.js
 
 ## Related information
 
