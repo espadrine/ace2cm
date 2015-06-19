@@ -24,7 +24,10 @@ function fetchHighlightRules(aceSheet) {
       }
     } else { break; }
   }
-  return result;
+  return {
+    code: result,
+    highlightRulesFunc: functionName
+  };
 }
 
 // Given a file located at `filePath` containing `text` (which includes a
@@ -118,7 +121,9 @@ var aceHighlightBasename = modeConf.aceName + '_highlight_rules';
 var aceHighlightFile = fs.readFileSync(path.join(aceHighlightDir,
     aceHighlightBasename + '.js'));
 // Find all required modules' path.
-modeConf.rules = fetchHighlightRules(aceHighlightFile);
+var hlr = fetchHighlightRules(aceHighlightFile);
+modeConf.rules = hlr.code;
+modeConf.rulesFuncName = hlr.highlightRulesFunc;
 modeConf.dependencies = fetchModule(aceHighlightBasename,
     aceHighlightFile).join('\n');
 

@@ -24,7 +24,7 @@ CodeMirror.defineMode("{{=it.modeName}}", function(cmCfg, modeCfg) {
 {{=it.dependencies}}
 
   // Ace highlight rules function imported below.
-  var HighlightRules = require({{=JSON.stringify(it.aceName + '_highlight_rules')}}).{{=it.aceName[0].toUpperCase() + it.aceName.slice(1) + 'HighlightRules'}};
+  var HighlightRules = require({{=JSON.stringify(it.aceName + '_highlight_rules')}}).{{=it.rulesFuncName}};
 
   {{? it.mixedMode }}
   // FIXME: add mixed modes support.
