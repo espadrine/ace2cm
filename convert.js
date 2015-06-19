@@ -12,7 +12,7 @@ function fetchHighlightRules(aceSheet) {
     var line = lines[i];
     if (beforeStart) {
       if (line.match(/HighlightRules = function/)) {
-        functionName = line.match(/ ([a-zA-Z\$_]+HighlightRules) =/)[1];
+        functionName = line.match(/ ([a-zA-Z0-9\$_]+HighlightRules) =/)[1];
         beforeStart = false;
       }
     } else if (beforeEnd) {
